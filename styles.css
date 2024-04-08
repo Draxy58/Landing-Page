@@ -1,0 +1,338 @@
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #fff;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 50px 0;
+}
+
+/* Header styles */
+header {
+  background-color: #000000; /* Black background */
+  padding: 20px 0;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: none; /* Remove the shadow effect */
+  transition: background-color 0.3s ease;
+}
+
+
+.logo {
+  font-size: 2rem;
+  color: #fff;
+  margin-right: 30px;
+  cursor: pointer;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow effect */
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #1db954;
+}
+
+.search {
+  float: right;
+  margin-top: 10px;
+}
+
+.search input[type="text"] {
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+  background-color: #333;
+  color: #fff;
+}
+
+.search button {
+  padding: 8px 15px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.search button:hover {
+  background-color: #666;
+}
+
+/* Hero section styles */
+#hero {
+  background-image: url('placeholder.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  padding: 200px 0;
+  position: relative;
+}
+
+#hero:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Reduce opacity to 0.4 */
+}
+
+#hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  animation: slideUp 1s ease;
+}
+
+#hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  animation: slideUp 1s ease;
+  animation-delay: 0.5s;
+}
+
+
+/* Button styles */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #1db954;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+.btn:hover {
+  background-color: #22bb66;
+}
+
+/* Add effect when clicking */
+.btn:active {
+  transform: translateY(2px);
+}
+
+/* Pricing & Features section styles */
+#pricing-features {
+  background-color: #000; /* Change background color to black */
+}
+
+#pricing-features h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 50px;
+}
+
+.features {
+  display: flex;
+  justify-content: center;
+}
+
+.plan {
+  padding: 20px;
+  margin: 0 20px;
+  text-align: center;
+  background-color: #1a1a1a; /* Change background color */
+  border-radius: 10px;
+  width: 300px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.plan:hover {
+  transform: translateY(-5px);
+}
+
+.plan h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.plan ul {
+  list-style: none;
+  padding: 0;
+}
+
+.plan ul li {
+  margin-bottom: 10px;
+  color: #ccc;
+}
+
+.plan p {
+  margin-top: 20px;
+  color: #ccc;
+}
+
+.plan:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+
+/* Playlist section styles */
+/* Playlist section styles */
+.playlist {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.playlist-item {
+  border-radius: 10px;
+  padding: 20px;
+  width: calc(33.33% - 20px); /* Adjusted width to fit three items in a row */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.playlist-item.chill-vibes {
+  background-image: url('chill_vibes.jpg'); /* Background image for Chill Vibes */
+}
+
+.playlist-item.workout-mix {
+  background-image: url('Wi.jpg'); /* Background image for Workout Mix */
+}
+
+.playlist-item.study-beats {
+  background-image: url('study_beats.jpg'); /* Background image for Study Beats */
+}
+
+.playlist-item:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Background overlay */
+  border-radius: 10px;
+}
+
+.playlist-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Increase shadow on hover */
+}
+
+.playlist h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.playlist p {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+.playlist-item a.btn {
+  padding: 10px 20px;
+  background-color: #1db954;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.playlist-item a.btn:hover {
+  background-color: #22bb66;
+}
+/* New CSS for Sign In and Sign Up buttons */
+.btn-sign-in,
+.btn-sign-up {
+  background-color: #1db954;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Add transition */
+  position: absolute;
+  z-index: 1001;
+}
+
+.btn-sign-in {
+  top: 20px;
+  right: 160px;
+}
+
+.btn-sign-up {
+  top: 20px;
+  right: 20px;
+}
+
+.btn-sign-in:hover,
+.btn-sign-up:hover {
+  background-color: #22bb66;
+}
+
+.btn-sign-in:active,
+.btn-sign-up:active {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Change box shadow when clicking */
+}
+
+/* Footer styles */
+footer {
+  background-color: #000;
+  text-align: center;
+  padding: 20px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+footer p {
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+/* Animation */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
